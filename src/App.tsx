@@ -1,7 +1,8 @@
 import "./App.css";
+import RatingCart from "./components/RatingCard";
 
 function App() {
-  return <div></div>;
+  return <RatingCart></RatingCart>;
 }
 
 export default App;
