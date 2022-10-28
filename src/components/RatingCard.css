@@ -20,7 +20,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 
   background: radial-gradient(
@@ -102,6 +102,7 @@ img {
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.25s linear;
 }
 
 .rating__container button:hover {
@@ -131,7 +132,6 @@ img {
 
 .submision-btn.active:hover {
   transform: scale(1.05);
-  transition: 0.25s linear;
 }
 
 .submision-btn.inactive {

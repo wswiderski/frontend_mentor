@@ -1,19 +1,21 @@
 import { useState } from "react";
 import "./RatingCard.css";
 
+const availableOptions = [1, 2, 3, 4, 5];
+
 function RatingCard() {
   const [submited, setSubmited] = useState(false);
-  const [rate, setRate] = useState(0);
+  const [selectedRate, setSelectedRate] = useState(0);
 
   function submitHandler() {
-    if (rate) {
+    if (selectedRate) {
       setSubmited(true);
     }
   }
 
   function onRateSelectionHandler(event: React.MouseEvent<HTMLButtonElement>) {
     const newRate = parseInt(event.currentTarget.innerHTML);
-    setRate(newRate);
+    setSelectedRate(newRate);
   }
 
   return (
@@ -32,39 +34,22 @@ function RatingCard() {
               feedback is appreciated to help us improve our offering!
             </p>
             <div className="rating__container">
-              <button
-                className={rate === 1 ? "selected" : ""}
-                onClick={onRateSelectionHandler}
-              >
-                1
-              </button>
-              <button
-                className={rate === 2 ? "selected" : ""}
-                onClick={onRateSelectionHandler}
-              >
-                2
-              </button>
-              <button
-                className={rate === 3 ? "selected" : ""}
-                onClick={onRateSelectionHandler}
-              >
-                3
-              </button>
-              <button
-                className={rate === 4 ? "selected" : ""}
-                onClick={onRateSelectionHandler}
-              >
-                4
-              </button>
-              <button
-                className={rate === 5 ? "selected" : ""}
-                onClick={onRateSelectionHandler}
-              >
-                5
-              </button>
+              {availableOptions.map((rate: number) => {
+                return (
+                  <button
+                    key={rate}
+                    className={selectedRate === rate ? "selected" : ""}
+                    onClick={onRateSelectionHandler}
+                  >
+                    {rate}
+                  </button>
+                );
+              })}
             </div>
             <button
-              className={`submision-btn ${rate === 0 ? "inactive" : "active"}`}
+              className={`submision-btn ${
+                selectedRate === 0 ? "inactive" : "active"
+              }`}
               onClick={submitHandler}
             >
               SUBMIT
@@ -74,7 +59,7 @@ function RatingCard() {
         <div className="card__face card__face--back">
           <div className="card__main card__main--back">
             <img src="./img/illustration-thank-you.svg" alt="Thank you img" />
-            <h3>You selected {rate} out of 5</h3>
+            <h3>You selected {selectedRate} out of 5</h3>
             <h2>Thank you!</h2>
             <p>
               We appreciate you taking the time to give a rating.
