@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="left panel">
+    <app-number-input
+      title="Bill"
+      imgUrl="../../assets/img/icon-dollar.svg"
+      imgAlt="Dollar image"
+      [(value)]="billAmount"
+    ></app-number-input>
+    <app-tip-input></app-tip-input>
+    <app-number-input
+      title="Number of People"
+      imgUrl="../../assets/img/icon-person.svg"
+      imgAlt="Person image"
+      [(value)]="peopleAmount"
+      [errorMsg]="'Can\'t be zero'"
+    ></app-number-input>
+  </div>
+  <div class="right panel">
+    <app-result-text title="Tip Amount" subtitle="/ person"></app-result-text>
+    <app-result-text title="Total" subtitle="/ person"></app-result-text>
+    <button [disabled]="!resetAvailable" (click)="onReset()">RESET</button>
+  </div>
+</div>

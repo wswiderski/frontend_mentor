@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="label row">
+    <label>{{ title }}</label>
+    <label *ngIf="errorMsg" class="error">{{errorMsg}}</label>
+  </div>
+  <div class="input row">
+    <img [src]="imgUrl" [alt]="imgAlt" />
+    <input type="number" [(ngModel)]="value" (change)="onChange()" />
+  </div>
+</div>

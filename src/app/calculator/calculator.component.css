@@ -1,0 +1,43 @@
+.container {
+  background-color: var(--white);
+  display: flex;
+  padding: 20px 20px;
+  border-radius: 20px;
+  width: 70vw;
+}
+
+.panel {
+  flex: 1;
+  padding: 30px;
+}
+
+.right {
+  background-color: var(--very-dark-cyan);
+  border-radius: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: var(--strong-cyan);
+  border: none;
+  border-radius: 5px;
+  color: var(--very-dark-cyan);
+}
+
+button:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 665px) {
+  .container {
+    min-width: 100vw;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .right {
+    margin: 20px;
+  }
+}
