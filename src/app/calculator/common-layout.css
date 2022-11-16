@@ -1,0 +1,92 @@
+button {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: var(--strong-cyan);
+  border: none;
+  border-radius: 5px;
+  color: var(--very-dark-cyan);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+input {
+  cursor: pointer;
+  border: none;
+  text-align: right;
+  background: none;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+}
+
+input:focus {
+  outline: none;
+}
+
+input,
+.input {
+  cursor: pointer;
+}
+
+.input {
+  background-color: var(--very-light-grayish-cyan);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.input:hover {
+  outline-style: solid;
+  outline-color: var(--strong-cyan);
+  outline-width: 2px;
+}
+
+label {
+  color: var(--very-dark-cyan);
+  font-size: var(--font-size-small);
+}
+
+.label {
+  margin-bottom: 7px;
+}
+
+.error {
+  text-align: right;
+  color: red;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--very-dark-cyan);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--very-dark-cyan);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--very-dark-cyan);
+}

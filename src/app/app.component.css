@@ -9,6 +9,7 @@ h1 {
   font-size: var(--font-size);
   margin: 13vh 0px 7vh;
   letter-spacing: 0.4em;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 665px) {

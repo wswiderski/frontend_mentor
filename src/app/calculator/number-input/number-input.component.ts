@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-number-input',
   templateUrl: './number-input.component.html',
-  styleUrls: ['./number-input.component.css'],
+  styleUrls: ['../common-layout.css', './number-input.component.css'],
 })
 export class NumberInputComponent {
   @Input() title: string = '';
@@ -13,7 +13,8 @@ export class NumberInputComponent {
   @Input() errorMsg: string = '';
   @Output() valueChange = new EventEmitter<number>();
 
-  public onChange() {
+  public onInput() {
+    console.log(this.value);
     this.valueChange.emit(this.value);
   }
 }

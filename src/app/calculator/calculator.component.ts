@@ -4,7 +4,7 @@ import { Tip } from './model/tip';
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.css'],
+  styleUrls: ['./common-layout.css','./calculator.component.css'],
 })
 export class CalculatorComponent implements OnInit {
   billAmount: number = 0;

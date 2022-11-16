@@ -3,31 +3,37 @@
   display: flex;
   padding: 20px 20px;
   border-radius: 20px;
-  width: 70vw;
+  width: 60vw;
 }
 
-.panel {
+.container div {
   flex: 1;
   padding: 30px;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
 .right {
   background-color: var(--very-dark-cyan);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.space{
+  flex: 1;
 }
 
 button {
-  width: 100%;
-  padding: 10px 0px;
-  background-color: var(--strong-cyan);
-  border: none;
-  border-radius: 5px;
-  color: var(--very-dark-cyan);
+  align-self: flex-end;
 }
 
-button:disabled {
-  opacity: 0.25;
-  cursor: not-allowed;
+button:hover {
+  background-color: var(--light-grayish-cyan);
 }
 
 @media screen and (max-width: 665px) {

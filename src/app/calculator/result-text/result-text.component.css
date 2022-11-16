@@ -19,7 +19,7 @@
 
 .subtitle {
   color: var(--dark-grayish-cyan);
-  font-size: small;
+  font-size: var(--font-size-small);
 }
 
 .result {
