@@ -29,3 +29,8 @@
   font-weight: var(--font-weights);
   color: var(--strong-cyan);
 }
+
+.result label {
+  font-size: 2.2rem;
+  font-weight: 700;
+}

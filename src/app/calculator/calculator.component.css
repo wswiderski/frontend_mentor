@@ -3,7 +3,8 @@
   display: flex;
   padding: 20px 20px;
   border-radius: 20px;
-  width: 60vw;
+  width: auto;
+  max-width: 55vw;
 }
 
 .container div {
@@ -36,7 +37,11 @@ button:hover {
   background-color: var(--light-grayish-cyan);
 }
 
-@media screen and (max-width: 665px) {
+app-result-text {
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 700px) {
   .container {
     min-width: 100vw;
     flex-direction: column;
@@ -45,5 +50,21 @@ button:hover {
 
   .right {
     margin: 20px;
+  }
+
+  app-result-text {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 1335px) {
+  .container {
+    max-width: 75vw;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .container {
+    max-width: 85vw;
   }
 }

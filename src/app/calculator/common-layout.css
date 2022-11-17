@@ -7,6 +7,7 @@ button {
   color: var(--very-dark-cyan);
   cursor: pointer;
   font-weight: 700;
+  font-size: var(--font-size-big);
 }
 
 button:hover {
@@ -21,6 +22,7 @@ input {
   background: none;
   color: var(--very-dark-cyan);
   font-weight: 700;
+  font-size: var(--font-size-big);
 }
 
 input:focus {
@@ -101,5 +103,12 @@ label {
   40%,
   60% {
     transform: translate3d(4px, 0, 0);
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  input,
+  button {
+    font-size: calc(0.7 * var(--font-size-big));
   }
 }
