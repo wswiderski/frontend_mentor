@@ -8,6 +8,10 @@
   justify-content: flex-start;
 }
 
+img {
+  object-fit: contain;
+}
+
 .error,
 input {
   flex: 1;
