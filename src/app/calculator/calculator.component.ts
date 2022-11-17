@@ -118,7 +118,18 @@ export class CalculatorComponent {
   private trimToDecimal(value: string): string {
     value = value.replace(/,/g, '.');
     value = value.replace(/[^\d.]/g, '');
-    value = value.replace(/(?<=\..*)\./g, '');
+    const numberParts = value.split('.');
+    const lastDot = value[value.length - 1] === '.';
+    value = numberParts[0];
+    if (lastDot && value.search('.') === value.length - 1) {
+      value += '.';
+    }
+    if (numberParts.length > 1) {
+      value += '.';
+      for (let i = 1; i < numberParts.length; i++) {
+        value += numberParts[i];
+      }
+    }
     if (value.length > 1 && value[0] === '0') {
       return '' + parseFloat(value);
     }
