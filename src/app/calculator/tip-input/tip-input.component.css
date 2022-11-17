@@ -22,3 +22,14 @@ button {
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
 }
+
+input:focus,
+.selected-input {
+  outline-style: solid;
+  outline-color: var(--strong-cyan);
+  outline-width: 2px;
+}
+
+button:hover {
+  background-color: var(--light-grayish-cyan);
+}

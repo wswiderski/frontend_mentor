@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Tip } from '../model/tip';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-tip-input',
@@ -8,19 +8,23 @@ import { Tip } from '../model/tip';
 })
 export class TipInputComponent {
   @Input() title: string = '';
-  @Input() errorMsg: string = '';
-  @Input() tip: Tip = {};
+  @Input() selectedTip: number = 0;
+  @Input() customTip = new FormControl('');
 
-  @Output() tipChange = new EventEmitter<number>();
-  @Output() customTipChange = new EventEmitter<number>();
+  @Output() selectedTipChange = new EventEmitter<number>();
+  @Output() customTipChange = new EventEmitter<FormControl>();
 
-  options: number[] = [5, 10, 15, 20, 25];
+  tipOptions: number[] = [5, 10, 15, 20, 25];
 
-  onCustomTipChange(event: Event) {
-    this.customTipChange.emit(+(event.target as HTMLInputElement).value);
+  onCustomTipChange() {
+    this.customTipChange.emit();
   }
 
-  onTipChange(value: number) {
-    this.tipChange.emit(value);
+  onCustomTipFocus() {
+    this.selectedTipChange.emit(0);
+  }
+
+  onSelectedTipChange(value: number) {
+    this.selectedTipChange.emit(value);
   }
 }

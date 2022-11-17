@@ -1,15 +1,26 @@
 <div class="container">
   <div class="label row">
     <label>{{ title }}</label>
-    <label *ngIf="errorMsg" class="error">{{ errorMsg }}</label>
   </div>
   <div class="selection-grid">
-    <button *ngFor="let option of options">{{ option }}%</button>
+    <button
+      *ngFor="let tip of tipOptions"
+      [ngClass]="{ selected: tip === selectedTip }"
+      (click)="onSelectedTipChange(tip)"
+    >
+      {{ tip }}%
+    </button>
     <input
+      [ngClass]="{
+        'selected-input': customTip.value.length > 0
+      }"
+      #tipInput
       class="input"
-      type="number"
       placeholder="Custom"
-      (input)="onCustomTipChange($event)"
+      [formControl]="customTip"
+      (focus)="tipInput.select(); onCustomTipFocus()"
+      (input)="onCustomTipChange()"
+      (focusout)="onCustomTipChange()"
     />
   </div>
 </div>

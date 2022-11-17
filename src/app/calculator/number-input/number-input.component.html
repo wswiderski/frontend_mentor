@@ -3,8 +3,15 @@
     <label>{{ title }}</label>
     <label *ngIf="errorMsg" class="error">{{ errorMsg }}</label>
   </div>
-  <div class="input row">
+  <div [ngClass]="{ error: errorMsg }" class="input row">
     <img [src]="imgUrl" [alt]="imgAlt" />
-    <input type="number" [(ngModel)]="value" (input)="onInput()" />
+    <input
+      #numberInput
+      placeholder="0"
+      (focus)="numberInput.select()"
+      [formControl]="value"
+      (input)="onInput()"
+      (focusout)="onInput()"
+    />
   </div>
 </div>

@@ -6,7 +6,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { NumberInputComponent } from './calculator/number-input/number-input.component';
 import { TipInputComponent } from './calculator/tip-input/tip-input.component';
 import { ResultTextComponent } from './calculator/result-text/result-text.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
     TipInputComponent,
     ResultTextComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

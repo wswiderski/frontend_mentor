@@ -11,7 +11,7 @@
   padding: 30px;
 }
 
-.left{
+.left {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -24,7 +24,7 @@
   flex-direction: column;
 }
 
-.space{
+.space {
   flex: 1;
 }
 
