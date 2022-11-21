@@ -20,7 +20,6 @@ export class JobListItemComponent {
   }
 
   public onTagSelection(tag: string): void {
-    console.log(tag);
     this.tagSelection.emit(tag);
   }
 }
