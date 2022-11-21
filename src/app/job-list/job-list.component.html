@@ -1,0 +1,13 @@
+<div class="container">
+  <app-job-list-fliter
+    [ngStyle]="{ visibility: filterBy.length !== 0 ? 'visible' : 'hidden' }"
+    [tags]="filterBy"
+    (tagsClear)="filterBy = []"
+    (tagRemove)="onTagRemove($event)"
+  ></app-job-list-fliter>
+  <app-job-list-item
+    *ngFor="let job of jobs | jobFilter: filterBy"
+    [job]="job"
+    (tagSelection)="onTagSelection($event)"
+  ></app-job-list-item>
+</div>

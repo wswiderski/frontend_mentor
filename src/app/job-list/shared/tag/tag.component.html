@@ -1,0 +1,4 @@
+<div class="tag">
+  <p [ngClass]="{ 'no-hover': showRemoveBtn }">{{ tag }}</p>
+  <button *ngIf="showRemoveBtn">X</button>
+</div>

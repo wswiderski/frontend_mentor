@@ -1,0 +1,77 @@
+@import '../../../variables.scss';
+
+.card {
+    padding          : 30px 40px;
+    background-color : white;
+    display          : flex;
+    border-radius    : 5px;
+    border-left      : 5px solid;
+    border-left-color: white;
+
+    -webkit-box-shadow: 0px 5px 13px 2px $dark-grayish-cyan;
+    -moz-box-shadow   : 0px 5px 13px 2px $dark-grayish-cyan;
+    box-shadow        : 0px 5px 13px 2px $dark-grayish-cyan;
+
+    &:hover {
+        border-left-color: $desaturated-dark-cyan;
+    }
+}
+
+img {
+    object-fit: contain;
+}
+
+h4 {
+    color       : $desaturated-dark-cyan;
+    margin-right: 10px !important;
+}
+
+h3 {
+    font-size: 1.25rem;
+
+    &:hover {
+        color : $desaturated-dark-cyan;
+        cursor: pointer;
+    }
+}
+
+.info {
+    padding-left   : 20px;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+}
+
+.row {
+    display    : flex;
+    align-items: center;
+}
+
+.tags {
+    align-items    : center;
+    display        : flex;
+    flex-wrap      : wrap;
+    flex-direction : row;
+    justify-content: flex-end;
+    flex           : 1;
+    gap            : 15px;
+}
+
+div {
+    * {
+        margin: 0;
+    }
+
+    p,
+    span {
+        color: $dark-grayish-cyan;
+    }
+
+    span {
+        height          : 3px;
+        width           : 3px;
+        background-color: #bbb;
+        border-radius   : 50%;
+        margin          : 0px 15px;
+    }
+}

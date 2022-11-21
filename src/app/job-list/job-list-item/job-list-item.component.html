@@ -1,0 +1,26 @@
+<div class="card">
+  <img [src]="job.logo" [alt]="'Logo ' + job.company" />
+  <div class="info">
+    <div class="row">
+      <h4>{{ job.company }}</h4>
+      <app-badge *ngIf="job.new" text="NEW!"></app-badge>
+      <app-badge *ngIf="job.featured" text="FEATURED"></app-badge>
+    </div>
+    <h3 class="row">{{ job.position }}</h3>
+    <div class="row">
+      <p>{{ job.postedAt }}</p>
+      <span></span>
+      <p>{{ job.contract }}</p>
+      <span></span>
+      <p>{{ job.location }}</p>
+    </div>
+  </div>
+  <div class="tags">
+    <app-tag
+      *ngFor="let tag of tags"
+      [tag]="tag"
+      [showRemoveBtn]="false"
+      (click)="onTagSelection(tag)"
+    ></app-tag>
+  </div>
+</div>

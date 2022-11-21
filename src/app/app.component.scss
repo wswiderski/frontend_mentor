@@ -1,0 +1,9 @@
+@import '../variables.scss';
+
+div {
+    height           : 155px;
+    width            : 100vw;
+    background-image : url('../assets/images/bg-header-desktop.svg');
+    background-repeat: repeat-x;
+    background-color : $desaturated-dark-cyan;
+}

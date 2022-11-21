@@ -1,0 +1,42 @@
+@import '../../../../variables.scss';
+
+.tag {
+    margin : 0px;
+    color  : $desaturated-dark-cyan;
+    display: flex;
+
+    p {
+        border-radius   : 7px;
+        background-color: $light-grayish-cyan-background;
+        padding         : 7px 7px 4px 7px;
+        margin          : 0px;
+
+        &:hover {
+            background-color: $desaturated-dark-cyan;
+            color           : $light-grayish-cyan;
+            border-radius   : 7px;
+            cursor          : pointer;
+        }
+
+        &.no-hover {
+            pointer-events: none;
+        }
+    }
+
+    button {
+        background-color: $desaturated-dark-cyan;
+        border          : none;
+        border-radius   : 0px 7px 7px 0px;
+        color           : $light-grayish-cyan;
+        font-weight     : bold;
+        font-size       : large;
+        padding-left    : 8px;
+        padding-right   : 8px;
+
+        &:hover {
+            background-color: $very-dark-grayish-cyan;
+            cursor          : pointer;
+        }
+    }
+
+}

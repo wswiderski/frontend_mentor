@@ -1,0 +1,11 @@
+<div class="filter">
+  <div class="tags">
+    <app-tag
+      *ngFor="let tag of tags"
+      [tag]="tag"
+      [showRemoveBtn]="true"
+      (click)="onTagRemove(tag)"
+    ></app-tag>
+  </div>
+  <p (click)="onTagsClear()">Clear</p>
+</div>

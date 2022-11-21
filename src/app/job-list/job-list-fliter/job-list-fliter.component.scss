@@ -1,0 +1,36 @@
+@import '../../../variables.scss';
+
+.filter {
+    padding          : 10px 40px;
+    background-color : white;
+    display          : flex;
+    border-radius    : 5px;
+    border-left      : 5px solid;
+    border-left-color: white;
+    flex-direction   : row;
+    align-items      : center;
+
+    -webkit-box-shadow: 0px 5px 13px 2px $dark-grayish-cyan;
+    -moz-box-shadow   : 0px 5px 13px 2px $dark-grayish-cyan;
+    box-shadow        : 0px 5px 13px 2px $dark-grayish-cyan;
+
+    .tags {
+        width    : 100%;
+        display  : flex;
+        gap      : 10px 20px;
+        flex-wrap: wrap;
+    }
+
+    p {
+        height    : 100%;
+        align-self: center;
+        font-size : medium;
+        color     : $desaturated-dark-cyan;
+        margin    : 0px;
+
+        &:hover {
+            text-decoration: underline;
+            cursor         : pointer;
+        }
+    }
+}

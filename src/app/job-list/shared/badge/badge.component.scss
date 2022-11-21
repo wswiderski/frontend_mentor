@@ -1,0 +1,24 @@
+@import '../../../../variables.scss';
+
+div {
+    color          : $light-grayish-cyan;
+    padding        : 3px 7px 0px 7px;
+    border-radius  : 20px;
+    margin         : 0px 5px;
+    font-size      : small;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+    & p {
+        margin: 0px;
+    }
+}
+
+.new {
+    background-color: $desaturated-dark-cyan;
+}
+
+.featured {
+    background-color: $very-dark-grayish-cyan;
+}
