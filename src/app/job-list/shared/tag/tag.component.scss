@@ -10,6 +10,7 @@
         background-color: $light-grayish-cyan-background;
         padding         : 7px 7px 4px 7px;
         margin          : 0px;
+        transition      : all .5s;
 
         &:hover {
             background-color: $desaturated-dark-cyan;
@@ -32,6 +33,7 @@
         font-size       : large;
         padding-left    : 8px;
         padding-right   : 8px;
+        transition      : all .5s;
 
         &:hover {
             background-color: $very-dark-grayish-cyan;

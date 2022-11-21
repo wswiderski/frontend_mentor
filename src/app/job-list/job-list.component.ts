@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Job } from '../model/job';
 import { JobService } from '../services/job.service';
@@ -6,6 +7,15 @@ import { JobService } from '../services/job.service';
   selector: 'app-job-list',
   templateUrl: './job-list.component.html',
   styleUrls: ['./job-list.component.scss'],
+  animations: [
+    trigger('myInsertRemoveTrigger', [
+      transition(':enter', [
+        style({ opacity: 0, height: '100%' }),
+        animate('0.5s', style({ opacity: 1, height: '100%' })),
+      ]),
+      transition(':leave', [animate('0.5s', style({ opacity: 0, height: 0 }))]),
+    ]),
+  ],
 })
 export class JobListComponent implements OnInit {
   filterBy: string[] = [];
@@ -22,9 +32,12 @@ export class JobListComponent implements OnInit {
     this.filterBy.splice(index, 1);
   }
 
-  public onTagSelection(tag: string) {
+  public onTagSelection(tag: string, elementId: string) {
     if (!this.filterBy.includes(tag)) {
       this.filterBy.push(tag);
+      document.getElementById(elementId)?.scrollIntoView({
+        behavior: 'smooth',
+      });
     }
   }
 }

@@ -5,8 +5,8 @@ aside {
     background-image : url('../assets/images/bg-header-desktop.svg');
     background-repeat: repeat-x;
     background-color : $desaturated-dark-cyan;
-    
+
     @media screen and (max-width: 800px) {
-        background-image : url('../assets/images/bg-header-mobile.svg');
+        background-image: url('../assets/images/bg-header-mobile.svg');
     }
 }

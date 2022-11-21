@@ -6,8 +6,10 @@
     (tagRemove)="onTagRemove($event)"
   ></app-job-list-fliter>
   <app-job-list-item
+    @myInsertRemoveTrigger
     *ngFor="let job of jobs | jobFilter: filterBy"
+    [id]="'jobItem_' + job.id"
     [job]="job"
-    (tagSelection)="onTagSelection($event)"
+    (tagSelection)="onTagSelection($event, 'jobItem_' + job.id)"
   ></app-job-list-item>
 </div>
