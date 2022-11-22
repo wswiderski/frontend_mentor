@@ -1,0 +1,19 @@
+@import '../../../../variables.scss';
+
+:host {
+    display       : flex;
+    flex-direction: column;
+
+    h5 {
+        margin        : 0px;
+        color         : $dark-gray;
+        letter-spacing: .1rem;
+        font-size     : .9rem;
+    }
+
+    h3 {
+        margin    : 0px;
+        margin-top: 15px;
+        font-size : clamp(.5rem, 4vw, 1.4rem);
+    }
+}

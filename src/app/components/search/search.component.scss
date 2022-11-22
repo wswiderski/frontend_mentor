@@ -1,0 +1,31 @@
+@import '../../../variables.scss';
+
+.container {
+    display        : flex;
+    justify-content: baseline;
+    cursor         : pointer;
+
+    input {
+        cursor       : pointer;
+        border       : none;
+        border-radius: 10px 0px 0px 10px;
+        flex         : 1;
+        padding-left : 20px;
+        font-size    : large;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    img {
+        object-fit      : cover;
+        padding         : 30px;
+        background-color: $very-dark-gray;
+        border-radius   : 0px 10px 10px 0px;
+
+        &:hover {
+            background-color: $dark-gray;
+        }
+    }
+}
