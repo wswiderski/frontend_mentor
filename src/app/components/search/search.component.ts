@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { IpLocation } from 'src/app/model/ip-location';
-import { IpApiService } from 'src/app/service/ip-api.service';
+import { IpLocation } from '../../model/ip-location';
+import { IpApiService } from '../../service/ip-api.service';
 
 @Component({
   selector: 'app-search',
