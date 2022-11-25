@@ -17,8 +17,17 @@
         font-size : 1.2rem;
     }
 
-    @media screen and (max-width: $breakpoint-mobile) {
+    @media screen and (max-width: $breakpoint-tablet) {
+        h5 {
+            font-size: .75rem;
+        }
 
+        h3 {
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
 
         justify-content: center;
         align-items    : center;
@@ -31,6 +40,5 @@
             margin-top: 5px;
             font-size : .8rem;
         }
-
     }
 }
