@@ -1,10 +1,10 @@
 <p *ngIf="errorMessage">{{ errorMessage }}</p>
 <div *ngIf="!errorMessage" class="info">
   <app-info-item title="IP ADDRESS" [text]="ipAddress"></app-info-item>
-  <span class="devider"></span>
+  <span *ngIf="showDevider" class="devider"></span>
   <app-info-item title="LOCATION" [text]="location"></app-info-item>
-  <span class="devider"></span>
+  <span *ngIf="showDevider" class="devider"></span>
   <app-info-item title="TIMEZONE" [text]="timezone"></app-info-item>
-  <span class="devider"></span>
+  <span *ngIf="showDevider" class="devider"></span>
   <app-info-item title="ISP" [text]="isp"></app-info-item>
 </div>

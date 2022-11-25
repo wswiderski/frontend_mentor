@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { IpLocation } from '../../model/ip-location';
 
 @Component({
@@ -10,9 +10,20 @@ export class InfoComponent implements OnInit {
   @Input() ipLocation: IpLocation | null = null;
   @Input() errorMessage: string = '';
 
+  screenWidth: number = window.screen.width;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenWidth = event.target.innerWidth;
+  }
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  get showDevider(): boolean {
+    return this.screenWidth > 600;
+  }
 
   get ipAddress(): string {
     return this.ipLocation ? this.ipLocation.ip : '';

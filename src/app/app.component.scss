@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 #map {
     height : 65vh;
     width  : 100%;
@@ -25,12 +27,12 @@
     h1 {
         color    : white;
         top      : 5%;
-        font-size: 3rem;
+        font-size: 2.7rem;
     }
 
     app-search {
         min-width: 40%;
-        top  : 30%;
+        top      : 30%;
     }
 
     app-info {
@@ -39,5 +41,35 @@
         width     : 80%;
         z-index   : 10;
         overflow  : visible;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        app-search {
+            min-width: 65%;
+        }
+
+        app-info {
+            min-width: 90%;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+
+        app-search {
+            width: 90%;
+        }
+
+        app-info {
+            top: 55%;
+        }
+
+        h1 {
+            font-size: 1.7rem;
+        }
     }
 }
