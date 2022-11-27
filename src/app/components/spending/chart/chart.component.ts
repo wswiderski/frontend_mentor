@@ -3,6 +3,7 @@ import {
   Component,
   ElementRef,
   Input,
+  OnChanges,
   Renderer2,
 } from '@angular/core';
 import { SpendingPerDay } from '../../../model/spending-per-day';
@@ -15,7 +16,7 @@ const MAX_HEIGHT = 150;
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.scss'],
 })
-export class ChartComponent implements AfterViewInit {
+export class ChartComponent implements AfterViewInit, OnChanges {
   @Input() spendings: number[] = [];
 
   currentFocusIndex = -1;
@@ -24,6 +25,10 @@ export class ChartComponent implements AfterViewInit {
     private readonly elRef: ElementRef,
     private readonly renderer: Renderer2
   ) {}
+
+  ngOnChanges(): void {
+    this.adjustChartHeight();
+  }
 
   ngAfterViewInit(): void {
     this.adjustChartHeight();

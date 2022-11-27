@@ -9,7 +9,7 @@ import { Spending } from './model/spending';
 export class AppComponent {
   balance: number = 921.48;
   spending: Spending = {
-    spendings: [10, 30, 52.36, 31.07, 20, 35, 20],
+    spendings: [15, 30, 52.36, 31.07, 20, 35, 20],
     increaseProcent: 2.4,
   };
 }
