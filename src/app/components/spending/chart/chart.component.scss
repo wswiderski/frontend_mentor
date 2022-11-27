@@ -1,0 +1,9 @@
+:host {
+    display    : flex;
+    column-gap : 20px;
+    align-items: flex-end;
+
+    * {
+        flex: 1;
+    }
+}

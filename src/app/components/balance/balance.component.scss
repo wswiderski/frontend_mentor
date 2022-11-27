@@ -1,0 +1,33 @@
+@import '../../../variables.scss';
+
+:host {
+    display         : flex;
+    width           : 100%;
+    background-color: $soft-red;
+    padding         : $padding;
+    border-radius   : $border-radious;
+
+    aside {
+        flex          : 1;
+        display       : flex;
+        flex-direction: column;
+        row-gap       : 5px;
+
+        * {
+            margin: 0px;
+        }
+
+        h5 {
+            color      : $very-pale-orange;
+            font-weight: normal;
+        }
+
+        h2 {
+            color: $very-pale-orange;
+        }
+    }
+
+    img {
+        object-fit: scale-down;
+    }
+}

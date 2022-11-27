@@ -1,0 +1,15 @@
+<section id="chart">
+  <h2>Spending - Last 7 days</h2>
+  <app-chart [spendings]="spending.spendings"></app-chart>
+</section>
+<span class="separator"></span>
+<section id="info">
+  <aside class="total">
+    <h5>Total this month</h5>
+    <h2 class="value">{{ total | currency }}</h2>
+  </aside>
+  <aside class="increase">
+    <h5 class="value">{{ percentageIncrease }}</h5>
+    <h5>Total this month</h5>
+  </aside>
+</section>

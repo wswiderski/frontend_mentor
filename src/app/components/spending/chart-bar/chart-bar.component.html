@@ -1,0 +1,11 @@
+<div class="candle" [ngClass]="{ focused: spendingPerDay.focus }">
+  <span id="chartValueTooltip" class="value">{{
+    spendingPerDay.value | currency
+  }}</span>
+  <div
+    class="bar"
+    [ngStyle]="{ height: spendingPerDay.barHeight }"
+    [ngClass]="{ max: spendingPerDay.max }"
+  ></div>
+</div>
+<label>{{ spendingPerDay.label }}</label>

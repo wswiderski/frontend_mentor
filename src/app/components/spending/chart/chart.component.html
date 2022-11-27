@@ -1,0 +1,5 @@
+<app-chart-bar
+  (click)="toogleFocus(i)"
+  *ngFor="let spendingPerDay of spendingsPerDay; let i = index"
+  [spendingPerDay]="spendingPerDay"
+></app-chart-bar>
