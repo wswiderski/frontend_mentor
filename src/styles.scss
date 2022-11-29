@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+body {
+    font-family      : 'Manrope', sans-serif;
+    background-color : $very-pale-blue;
+    background-image : url('assets/images/bg-pattern.svg');
+    background-size  : 100vw 50vh;
+    background-repeat: no-repeat;
+}
+
+:root {
+    font-size: 15px;
+}
