@@ -1,0 +1,142 @@
+@import '../variables.scss';
+
+:host {
+    display       : flex;
+    align-items   : center;
+    flex-direction: column;
+
+    header {
+        background-image   : url('../assets/images/pattern-circles.svg');
+        background-position: center;
+        background-repeat  : no-repeat;
+        background-size    : contain;
+        text-align         : center;
+
+        h1 {
+            color: $dark-desaturated-blue;
+        }
+
+        h4 {
+            color: $grayish-blue;
+        }
+    }
+
+    aside {
+        background-color: white;
+        padding         : 20px;
+        border-radius   : 10px;
+        box-shadow      : 10px 10px 50px -10px gray;
+        width           : 34.375rem;
+
+        section {
+            display       : flex;
+            flex-direction: column;
+            align-items   : center;
+
+            .pricing {
+                width      : 100%;
+                display    : flex;
+                color      : $grayish-blue;
+                align-items: center;
+
+                h5 {
+                    font-size     : larger;
+                    letter-spacing: .1rem;
+                    flex          : 1;
+                    margin        : 0;
+                }
+            }
+
+            .range {
+                width      : 100%;
+                height     : 10px;
+                display    : inline-block;
+                position   : relative;
+                // margin  : 25px;
+
+                .empty,
+                .filled,
+                input[type="range"] {
+                    position     : absolute;
+                    height       : 100%;
+                    border-radius: 10px;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                .empty {
+                    opacity         : .7;
+                    background-color: $light-grayish-blue;
+                    width           : 100%;
+                    z-index         : 5;
+                }
+
+                .filled {
+                    background-color: $soft-cyan;
+                    opacity         : .7;
+                    width           : 50%;
+                    z-index         : 10;
+                }
+
+
+                input[type=range] {
+                    appearance      : none;
+                    background-color: transparent;
+                    margin          : 0px;
+                    width           : 100%;
+                    outline         : none;
+                    z-index         : 15;
+
+                    &::-webkit-slider-thumb,
+                    &::-moz-range-thumb {
+                        width            : 50px;
+                        height           : 50px;
+                        background-image : url('../assets/images/icon-slider.svg');
+                        object-fit       : cover;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+
+            .billing {
+                width          : 100%;
+                display        : flex;
+                justify-content: center;
+
+                label {
+                    flex       : 1;
+                    color      : $grayish-blue;
+                    margin-left: 10px;
+
+                    span {
+                        font-size       : smaller;
+                        padding         : 3px;
+                        padding-left    : 5px;
+                        padding-right   : 5px;
+                        border-radius   : 10px;
+                        background-color: $light-grayish-ed;
+                        color           : $light-red;
+                        margin-left     : 10px;
+                    }
+                }
+
+                #test {
+                    margin-left : 0px;
+                    margin-right: 10px;
+                    text-align  : right;
+                }
+            }
+        }
+
+        footer {
+            display: flex;
+        }
+
+        @media (max-width: 550px) {
+            min-width: none;
+            max-width: 60vw;
+        }
+    }
+}

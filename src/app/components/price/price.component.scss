@@ -1,0 +1,21 @@
+@import '../../../variables.scss';
+
+:host {
+    display    : flex;
+    align-items: center;
+    column-gap : 5px;
+
+    * {
+        margin: 0;
+    }
+
+    h5 {
+        letter-spacing: .1rem;
+        font-size     : larger;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+        color    : $dark-desaturated-blue;
+    }
+}
