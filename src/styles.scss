@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+@import './variables.scss';
+
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: $dark-blue;
+    height          : 100%;
+    margin          : 0px;
+}
+
+app-root {
+    height: 100%;
+}
+
+:root {
+    font-family: 'Manrope', sans-serif;
+    font-size  : 28px;
+}
