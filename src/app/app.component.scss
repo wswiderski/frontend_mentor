@@ -32,6 +32,7 @@
             display       : flex;
             flex-direction: column;
             align-items   : center;
+            row-gap       : 25px;
 
             .pricing {
                 width      : 100%;
@@ -47,56 +48,63 @@
                 }
             }
 
-            .range {
-                width      : 100%;
-                height     : 10px;
-                display    : inline-block;
-                position   : relative;
-                // margin  : 25px;
+            .range-input {
+                margin-bottom     : 20px;
+                width             : 100%;
+                -webkit-appearance: none;
+                height            : 10px;
+                border-radius     : 10px;
 
-                .empty,
-                .filled,
-                input[type="range"] {
-                    position     : absolute;
-                    height       : 100%;
-                    border-radius: 10px;
-
-                    &:hover {
-                        opacity: 1;
-                    }
+                &:hover {
+                    cursor: pointer;
                 }
 
-                .empty {
-                    opacity         : .7;
-                    background-color: $light-grayish-blue;
-                    width           : 100%;
-                    z-index         : 5;
+                &:focus {
+                    outline: none;
                 }
 
-                .filled {
-                    background-color: $soft-cyan;
-                    opacity         : .7;
-                    width           : 50%;
-                    z-index         : 10;
+                &::-webkit-slider-thumb {
+                    border             : none;
+                    width              : 40px;
+                    height             : 40px;
+                    border-radius      : 50%;
+                    background         : $strong-cyan;
+                    -webkit-appearance : none;
+                    background-image   : url('../assets/images/icon-slider.svg');
+                    background-position: center;
+                    background-repeat  : no-repeat;
+                    box-shadow         : 2px 15px 12px 0px $soft-cyan;
                 }
 
+                &:hover::-webkit-slider-thumb {
+                    opacity: .7;
+                }
 
-                input[type=range] {
-                    appearance      : none;
-                    background-color: transparent;
-                    margin          : 0px;
-                    width           : 100%;
-                    outline         : none;
-                    z-index         : 15;
+                &:active::-webkit-slider-thumb {
+                    opacity: 1;
+                    cursor : grabbing;
+                }
 
-                    &::-webkit-slider-thumb,
-                    &::-moz-range-thumb {
-                        width            : 50px;
-                        height           : 50px;
-                        background-image : url('../assets/images/icon-slider.svg');
-                        object-fit       : cover;
-                        background-repeat: no-repeat;
-                    }
+                &::-moz-range-thumb {
+                    border             : none;
+                    width              : 40px;
+                    height             : 40px;
+                    border-radius      : 50%;
+                    background         : $strong-cyan;
+                    -webkit-appearance : none;
+                    background-image   : url('../assets/images/icon-slider.svg');
+                    background-position: center;
+                    background-repeat  : no-repeat;
+                    box-shadow         : 2px 15px 12px 0px $soft-cyan;
+                }
+
+                &:hover::-moz-range-thumb {
+                    opacity: .7;
+                }
+
+                &:active::-moz-range-thumb {
+                    opacity: 1;
+                    cursor : grabbing;
                 }
             }
 
