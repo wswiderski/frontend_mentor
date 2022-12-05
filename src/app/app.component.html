@@ -6,7 +6,7 @@
   <section>
     <div class="pricing">
       <h5>{{ pageViews }}K PAGEVIEWS</h5>
-      <app-price [price]="price"></app-price>
+      <app-price *ngIf="desktop" [price]="price"></app-price>
     </div>
     <input
       class="range-input"
@@ -20,14 +20,18 @@
     <div class="billing">
       <label id="test">Monthly Billing</label>
       <app-checkbox [(value)]="yearly"></app-checkbox>
-      <label>Yearly Billing<span>25% discount</span></label>
+      <label
+        >Yearly Billing<span>{{ discountText }}</span></label
+      >
     </div>
+    <app-price *ngIf="!desktop" [price]="price"></app-price>
   </section>
+  <div class="devider"></div>
   <footer>
     <ul>
-      <li>Unlimited websites</li>
-      <li>100% data ownership</li>
-      <li>Email reports</li>
+      <li><span>Unlimited websites</span></li>
+      <li><span>100% data ownership</span></li>
+      <li><span>Email reports</span></li>
     </ul>
     <button>Start my trial</button>
   </footer>

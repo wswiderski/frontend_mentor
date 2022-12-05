@@ -4,11 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PriceComponent } from './components/price/price.component';
-import { RangeInputComponent } from './components/range-input/range-input.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 @NgModule({
-  declarations: [AppComponent, PriceComponent, RangeInputComponent, CheckboxComponent],
+  declarations: [AppComponent, PriceComponent, CheckboxComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

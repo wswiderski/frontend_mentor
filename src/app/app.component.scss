@@ -4,6 +4,7 @@
     display       : flex;
     align-items   : center;
     flex-direction: column;
+    row-gap       : 10vh;
 
     header {
         background-image   : url('../assets/images/pattern-circles.svg');
@@ -11,9 +12,14 @@
         background-repeat  : no-repeat;
         background-size    : contain;
         text-align         : center;
+        margin-top         : 10vh;
 
         h1 {
             color: $dark-desaturated-blue;
+
+            @media (max-width: 610px) {
+                font-size: 1.5rem;
+            }
         }
 
         h4 {
@@ -23,16 +29,17 @@
 
     aside {
         background-color: white;
-        padding         : 20px;
+        padding         : 40px;
         border-radius   : 10px;
         box-shadow      : 10px 10px 50px -10px gray;
-        width           : 34.375rem;
+        width           : 600px;
 
         section {
             display       : flex;
             flex-direction: column;
             align-items   : center;
-            row-gap       : 25px;
+            row-gap       : 35px;
+            margin-bottom : 35px;
 
             .pricing {
                 width      : 100%;
@@ -45,7 +52,12 @@
                     letter-spacing: .1rem;
                     flex          : 1;
                     margin        : 0;
+
+                    @media (max-width: 610px) {
+                        text-align: center;
+                    }
                 }
+
             }
 
             .range-input {
@@ -112,6 +124,7 @@
                 width          : 100%;
                 display        : flex;
                 justify-content: center;
+                align-items    : center;
 
                 label {
                     flex       : 1;
@@ -119,14 +132,19 @@
                     margin-left: 10px;
 
                     span {
+                        position        : relative;
                         font-size       : smaller;
                         padding         : 3px;
-                        padding-left    : 5px;
+                        padding-left    : 2px;
                         padding-right   : 5px;
                         border-radius   : 10px;
                         background-color: $light-grayish-ed;
                         color           : $light-red;
                         margin-left     : 10px;
+                    }
+
+                    @media (max-width: 470px) {
+                        font-size: .7rem;
                     }
                 }
 
@@ -138,13 +156,71 @@
             }
         }
 
-        footer {
-            display: flex;
+        .devider {
+            position  : relative;
+            height    : 1px;
+            opacity   : .7;
+            width     : calc(100% + 80px);
+            background: $pale-blue;
+            left      : -40px;
+
         }
 
-        @media (max-width: 550px) {
+        footer {
+            display    : flex;
+            align-items: center;
+            margin-top : 10px;
+
+            ul {
+                flex               : 1;
+                list-style-position: inside;
+                list-style-image   : url('../assets/images/icon-check.svg');
+                color              : $grayish-blue;
+                padding            : 0px;
+
+                li {
+                    line-height: 2rem;
+
+                    span {
+                        padding-left: 1em;
+                    }
+                }
+
+                @media (max-width: 610px) {
+                    text-align: center;
+                    font-size : medium;
+                }
+            }
+
+            button {
+                background-color: $dark-desaturated-blue;
+                color           : $light-grayish-blue;
+                font-size       : medium;
+                font-weight     : 800;
+                width           : 35%;
+                height          : 40px;
+                border          : none;
+                border-radius   : 20px;
+
+                &:hover {
+                    color : $very-pale-blue;
+                    cursor: pointer;
+                }
+
+                @media (max-width: 610px) {
+                    width: 60%
+                }
+            }
+
+            @media (max-width: 610px) {
+                row-gap       : 25px;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 610px) {
             min-width: none;
-            max-width: 60vw;
+            max-width: 75vw;
         }
     }
 }

@@ -1,18 +1,31 @@
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  desktop: boolean = true;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.desktop = event.target.innerWidth >= 610;
+  }
+
+  ngOnInit() {
+    this.desktop = window.innerWidth >= 610;
+  }
+
   pageViews: number = 100;
   yearly: boolean = false;
 
   min = 50;
   max = 150;
 
-  constructor(private readonly renderer: Renderer2) {}
+  get discountText(): string {
+    return this.desktop ? '25% descount' : '-25%';
+  }
 
   get price(): number {
     const fullPrice = (this.pageViews * 16) / 100;
