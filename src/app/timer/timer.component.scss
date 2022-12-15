@@ -1,0 +1,17 @@
+:host {
+    display: flex;
+    gap    : 35px;
+
+    app-flipper-item {
+        width : 15vw;
+        height: 15rem;
+    }
+
+    @media (max-width : 500px) {
+        gap: 10px;
+
+        app-flipper-item {
+            width: 20vw;
+        }
+    }
+}

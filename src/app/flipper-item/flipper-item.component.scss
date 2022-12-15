@@ -1,0 +1,102 @@
+@import '../../variables.scss';
+
+.card-body {
+    border-radius      : 15px;
+    backface-visibility: hidden;
+    position           : absolute;
+    width              : 100%;
+    height             : 100%;
+    background-color   : $DarkDesaturatedBlue;
+    text-align         : center;
+    color              : $SoftRed;
+    font-size          : 6em;
+    display            : flex;
+    align-items        : center;
+    justify-content    : center;
+}
+
+:host {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    gap           : 40px;
+
+    .card {
+        width             : 100%;
+        height            : 100%;
+        position          : relative;
+        background        : none;
+        border-radius     : 15px;
+        box-shadow        : 0px 20px 7px $VeryDarkMostlyBlackBlue;
+        perspective       : 30rem;
+        perspective-origin: top;
+        // mask: circle(6.9% at 100% 50%);
+
+        .rotating-part {
+            position       : absolute;
+            transform-style: preserve-3d;
+            width          : 100%;
+            height         : 100%;
+            z-index        : 1;
+
+            &.flip {
+                animation-name           : rotate;
+                animation-duration       : .3s;
+                animation-timing-function: ease-in;
+
+                @keyframes rotate {
+                    0% {
+                        transform: rotateX(0);
+                    }
+
+                    100% {
+                        transform: rotateX(-180deg);
+                    }
+                }
+            }
+
+            .front,
+            .back {
+                background-color: $CardTop;
+                clip-path       : inset(0 0 50% 0);
+            }
+
+            .front {
+                color: $CardTextTop;
+            }
+
+            .back {
+                background-color: $CardBottom;
+                clip-path       : inset(50% 0 0 0);
+                transform       : rotateX(180deg);
+            }
+        }
+
+        .top {
+            background-color: $CardTop;
+            clip-path       : inset(0 0 50% 0);
+            color           : $CardTextTop;
+        }
+
+        .bottom {
+            background-color: $CardBottom;
+            clip-path       : inset(50% 0 0 0);
+        }
+
+        .devider {
+            position        : absolute;
+            width           : 100%;
+            height          : 1px;
+            background-color: $VeryDarkMostlyBlackBlue;
+            top             : calc(50% - .5px);
+            opacity         : .7;
+            z-index         : 1;
+        }
+    }
+
+    label {
+        color         : $GrayishBlue;
+        font-size     : clamp(1rem, 1.3rem, 1.3rem);
+        letter-spacing: .3rem;
+    }
+}

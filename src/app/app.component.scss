@@ -1,0 +1,52 @@
+@import '../variables.scss';
+
+:host {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    row-gap       : 10vh;
+    position      : relative;
+    height        : 100vh;
+
+    h1 {
+        margin-top    : 20vh;
+        color         : $White;
+        letter-spacing: .7rem;
+        text-align    : center;
+
+        @media (max-width : 500px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    footer {
+        width           : 100%;
+        height          : 20vh;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        gap             : 5rem;
+        position        : absolute;
+        bottom          : 0px;
+        background-image: url('../assets/images/pattern-hills.svg');
+        background-size : cover;
+
+        fa-icon {
+            color    : $GrayishBlue;
+            font-size: 3.5rem;
+
+            &:hover {
+                cursor: pointer;
+                color : $SoftRed;
+            }
+
+            @media (max-width : 500px) {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width : 500px) {
+            gap: 3rem;
+        }
+    }
+}

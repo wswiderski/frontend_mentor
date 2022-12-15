@@ -1,0 +1,14 @@
+<div id="time-card" class="card">
+  <div
+    class="rotating-part"
+    (animationend)="onAnimationFinish()"
+    [ngClass]="{ flip: playAnimation }"
+  >
+    <div class="card-body front">{{ current }}</div>
+    <div class="card-body back">{{ next }}</div>
+  </div>
+  <div class="devider"></div>
+  <div class="card-body top">{{ next }}</div>
+  <div class="card-body bottom">{{ current }}</div>
+</div>
+<label for="time-card">{{ text }}</label>
