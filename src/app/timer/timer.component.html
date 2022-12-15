@@ -1,10 +1,28 @@
-<app-flipper-item text="DAYS" [currentNumber]="daysLeft"></app-flipper-item>
-<app-flipper-item text="HOURS" [currentNumber]="hoursLeft"></app-flipper-item>
 <app-flipper-item
+  [ngStyle]="{ height: height + 'px', width: width + 'px' }"
+  [fontSize]="fontSize"
+  [fontSizeLabel]="fontSizeLabel"
+  text="DAYS"
+  [currentNumber]="daysLeft"
+></app-flipper-item>
+<app-flipper-item
+  [ngStyle]="{ height: height + 'px', width: width + 'px' }"
+  [fontSize]="fontSize"
+  [fontSizeLabel]="fontSizeLabel"
+  text="HOURS"
+  [currentNumber]="hoursLeft"
+></app-flipper-item>
+<app-flipper-item
+  [ngStyle]="{ height: height + 'px', width: width + 'px' }"
+  [fontSize]="fontSize"
+  [fontSizeLabel]="fontSizeLabel"
   text="MINUTES"
   [currentNumber]="minutesLeft"
 ></app-flipper-item>
 <app-flipper-item
+  [ngStyle]="{ height: height + 'px', width: width + 'px' }"
+  [fontSize]="fontSize"
+  [fontSizeLabel]="fontSizeLabel"
   text="SECONDS"
   [currentNumber]="secondsLeft"
 ></app-flipper-item>

@@ -9,6 +9,9 @@ export class FlipperItemComponent implements OnInit, OnChanges {
   @Input() currentNumber = 0;
   @Input() text: 'SECONDS' | 'MINUTES' | 'HOURS' | 'DAYS' = 'SECONDS';
 
+  @Input() fontSize = 40;
+  @Input() fontSizeLabel = 20;
+
   numberToDisplay: number = 0;
   playAnimation: boolean = false;
 
