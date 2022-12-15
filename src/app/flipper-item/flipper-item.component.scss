@@ -29,6 +29,7 @@
         box-shadow        : 0px 20px 7px $VeryDarkMostlyBlackBlue;
         perspective       : 30rem;
         perspective-origin: top;
+        background-color  : $VeryDarkMostlyBlackBlue;
 
         .rotating-part {
             position       : absolute;
@@ -57,6 +58,10 @@
             .back {
                 background-color: $CardTop;
                 clip-path       : inset(0 0 50% 0);
+
+                mask          : url('../../assets/images/mask-circle-left.svg') center left/contain no-repeat, url('../../assets/images/mask-circle-right.svg') center right/contain no-repeat, linear-gradient(#fff 0 0);
+                mask-size     : 10px;
+                mask-composite: exclude;
             }
 
             .front {
@@ -81,14 +86,11 @@
             clip-path       : inset(50% 0 0 0);
         }
 
-        .devider {
-            position        : absolute;
-            width           : 100%;
-            height          : 1px;
-            background-color: $VeryDarkMostlyBlackBlue;
-            top             : calc(50% - .5px);
-            opacity         : .7;
-            z-index         : 1;
+        .top,
+        .bottom {
+            mask          : url('../../assets/images/mask-circle-left.svg') center left/contain no-repeat, url('../../assets/images/mask-circle-right.svg') center right/contain no-repeat, linear-gradient(#fff 0 0);
+            mask-size     : 10px;
+            mask-composite: exclude;
         }
     }
 
