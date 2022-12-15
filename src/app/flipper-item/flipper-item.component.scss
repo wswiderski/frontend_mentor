@@ -14,6 +14,16 @@
     justify-content    : center;
 }
 
+.card-mask {
+    mask          : url('../../assets/images/mask-circle-left.svg') center left/contain no-repeat, url('../../assets/images/mask-circle-right.svg') center right/contain no-repeat, linear-gradient(#fff 0 0);
+    mask-size     : 10px;
+    mask-composite: exclude;
+
+    @media (max-width: 500px) {
+        mask-size: 5px;
+    }
+}
+
 :host {
     display       : flex;
     flex-direction: column;
@@ -58,10 +68,6 @@
             .back {
                 background-color: $CardTop;
                 clip-path       : inset(0 0 50% 0);
-
-                mask          : url('../../assets/images/mask-circle-left.svg') center left/contain no-repeat, url('../../assets/images/mask-circle-right.svg') center right/contain no-repeat, linear-gradient(#fff 0 0);
-                mask-size     : 10px;
-                mask-composite: exclude;
             }
 
             .front {
@@ -84,13 +90,6 @@
         .bottom {
             background-color: $CardBottom;
             clip-path       : inset(50% 0 0 0);
-        }
-
-        .top,
-        .bottom {
-            mask          : url('../../assets/images/mask-circle-left.svg') center left/contain no-repeat, url('../../assets/images/mask-circle-right.svg') center right/contain no-repeat, linear-gradient(#fff 0 0);
-            mask-size     : 10px;
-            mask-composite: exclude;
         }
     }
 

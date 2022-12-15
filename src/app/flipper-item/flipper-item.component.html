@@ -4,17 +4,29 @@
     (animationend)="onAnimationFinish()"
     [ngClass]="{ flip: playAnimation }"
   >
-    <div [ngStyle]="{ fontSize: fontSize + 'px' }" class="card-body front">
+    <div
+      [ngStyle]="{ fontSize: fontSize + 'px' }"
+      class="card-body card-mask front"
+    >
       {{ current }}
     </div>
-    <div [ngStyle]="{ fontSize: fontSize + 'px' }" class="card-body back">
+    <div
+      [ngStyle]="{ fontSize: fontSize + 'px' }"
+      class="card-body card-mask back"
+    >
       {{ next }}
     </div>
   </div>
-  <div [ngStyle]="{ fontSize: fontSize + 'px' }" class="card-body top">
+  <div
+    [ngStyle]="{ fontSize: fontSize + 'px' }"
+    class="card-body card-mask top"
+  >
     {{ next }}
   </div>
-  <div [ngStyle]="{ fontSize: fontSize + 'px' }" class="card-body bottom">
+  <div
+    [ngStyle]="{ fontSize: fontSize + 'px' }"
+    class="card-body card-mask bottom"
+  >
     {{ current }}
   </div>
 </div>

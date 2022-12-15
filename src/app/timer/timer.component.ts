@@ -44,7 +44,7 @@ export class TimerComponent implements OnInit, OnDestroy {
   }
 
   get fontSize(): number {
-    return this.height / 2.2;
+    return this.height / 2.5;
   }
 
   get fontSizeLabel(): number {
@@ -62,7 +62,7 @@ export class TimerComponent implements OnInit, OnDestroy {
 
   private adjustItemSize(windowWidth: number, windowHeight: number) {
     if (windowWidth < 1000) {
-      this.width = windowWidth / 5;
+      this.width = windowWidth / 4.5;
       this.height = windowHeight * 0.2;
     } else {
       this.width = 200;
