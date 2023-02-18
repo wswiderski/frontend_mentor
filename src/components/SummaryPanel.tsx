@@ -1,7 +1,8 @@
-import { FC, Fragment } from "react";
+import { FC } from "react";
 import { Result } from "../model/results";
 import Detail from "./Detail";
 import Total from "./Total";
+import styles from "./SummaryPanel.module.scss";
 
 const SummaryPanel: FC<{ result: Result }> = ({ result }) => {
   const total = Math.floor(
@@ -9,7 +10,7 @@ const SummaryPanel: FC<{ result: Result }> = ({ result }) => {
   );
 
   return (
-    <section>
+    <section className={styles.summaryPanel}>
       <Total total={total}></Total>
       <aside>
         <h3>Summary</h3>
