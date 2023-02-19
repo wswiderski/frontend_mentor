@@ -1,13 +1,56 @@
+@import '../styles/variables';
+
 .summaryPanel {
   display       : flex;
   flex-direction: row;
+  margin        : auto;
+  border-radius : 30px;
+  box-shadow    : -10px 0px 35px 20px $pale-blue;
+  width         : 700px;
 
-  button {
-    color     : red;
-    transition: all .2s ease-in-out;
+  section,
+  aside {
+    flex   : 1;
+    padding: 7%;
+    row-gap: 1.3rem;
+  }
 
-    &:hover {
-      scale: 1.5;
+  aside {
+    display       : flex;
+    flex-direction: column;
+
+    h3 {
+      color      : $dark-gray-blue;
+      font-weight: 700;
     }
+
+    .gap {
+      flex: 1;
+    }
+
+    button {
+      color           : $white;
+      border          : none;
+      width           : 100%;
+      padding         : .7rem;
+      background-color: $dark-gray-blue;
+      border-radius   : 30px;
+
+      &:hover {
+        background: linear-gradient(0deg, $light-royal-blue 0%, $light-slate-blue 100%);
+        cursor    : pointer;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    width: 90vw;
+  }
+
+  @media (max-width: 570px) {
+    flex-direction: column;
+    width         : 100%;
+    height        : 100%;
+    border-radius : 0px;
   }
 }

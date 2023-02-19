@@ -1,0 +1,44 @@
+@import '../styles/variables';
+
+.detail {
+    border-radius: 10px;
+    display      : flex;
+    padding      : .5rem;
+    gap          : 5px;
+
+    img {
+        margin-right: 7px;
+    }
+
+    .gap {
+        flex: 1;
+    }
+
+    .value {
+        color: $dark-gray-blue;
+    }
+
+    .adition {
+        color: $light-lavender;
+    }
+}
+
+.red {
+    background-color: rgba($light-red, .1);
+    color           : $light-red;
+}
+
+.yellow {
+    background-color: rgba($orangey-yellow, .1);
+    color           : $orangey-yellow;
+}
+
+.green {
+    background-color: rgba($green-teal, .1);
+    color           : $green-teal;
+}
+
+.blue {
+    background-color: rgba($cobalt-blue, .1);
+    color           : $cobalt-blue;
+}

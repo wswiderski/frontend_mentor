@@ -1,11 +1,60 @@
+@import '../styles/variables';
+
 .total {
     display       : flex;
     flex-direction: column;
+    border-radius : 30px;
+    background    : linear-gradient(0deg, $light-royal-blue 0%, $light-slate-blue 100%);
+    align-items   : center;
+    color         : $light-lavender;
 
+    .resultCircle {
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+        background     : linear-gradient(0deg, $ersian-blue 0%, $violet-blue 100%);
+        width          : 9.5rem;
+        height         : 9.5rem;
+        border-radius  : 50%;
 
-}
+        .totalText {
+            color      : $white;
+            font-size  : 4rem;
+            font-weight: 800;
+        }
 
-.resultCircle {
-    display       : flex;
-    flex-direction: column;
+        .totalSubtext {
+            font-size: .8rem;
+        }
+    }
+
+    .greatText {
+        font-size: 1.5rem;
+        color    : $white;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    @media (max-width: 570px) {
+        border-radius: 0px 0px 30px 30px;
+
+        .resultCircle {
+            width        : 30vw;
+            height       : 30vw;
+            border-radius: 50%;
+
+            .totalText {
+                color      : $white;
+                font-size  : 3rem;
+                font-weight: 800;
+            }
+
+            .totalSubtext {
+                font-size: .8rem;
+            }
+        }
+    }
 }

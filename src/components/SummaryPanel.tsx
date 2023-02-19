@@ -34,6 +34,7 @@ const SummaryPanel: FC<{ result: Result }> = ({ result }) => {
           imgUrl="./icon-visual.svg"
           value={result.visual}
         ></Detail>
+        <span className={styles.gap}></span>
         <button>Continue</button>
       </aside>
     </section>

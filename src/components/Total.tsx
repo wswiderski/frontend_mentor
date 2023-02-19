@@ -6,10 +6,10 @@ const Total: FC<{ total: number }> = ({ total }) => {
     <section className={styles.total}>
       <h3>Your Result</h3>
       <div className={styles.resultCircle}>
-        <span>{total}</span>
-        <span>of 100</span>
+        <span className={styles.totalText}>{total}</span>
+        <span className={styles.totalSubtext}>of 100</span>
       </div>
-      <h3>Great</h3>
+      <h3 className={styles.greatText}>Great</h3>
       <p>
         You scored higher than 65% of the people who have taken these tests.
       </p>

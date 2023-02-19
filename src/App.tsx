@@ -1,5 +1,6 @@
 import SummaryPanel from "./components/SummaryPanel";
 import { Result } from "./model/results";
+import "./App.scss";
 
 const data: Result = {
   reaction: 80,
