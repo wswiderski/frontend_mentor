@@ -19,12 +19,12 @@
 
 body {
     margin             : 0px;
-    background-image   : url('images/bg-pattern-bottom-desktop.svg'), url('images/bg-pattern-top-desktop.svg');
+    background-image   : url('./assets/bg-pattern-bottom-desktop.svg'), url('./assets/bg-pattern-top-desktop.svg');
     background-position: right bottom, left top;
     background-repeat  : no-repeat, no-repeat;
 
     @media (max-width:950px) {
-        background-image: url('images/bg-pattern-bottom-mobile.svg'), url('images/bg-pattern-top-mobile.svg');
+        background-image: url('./assets/bg-pattern-bottom-mobile.svg'), url('./assets/bg-pattern-top-mobile.svg');
     }
 }
 
