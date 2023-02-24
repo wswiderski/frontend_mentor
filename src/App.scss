@@ -22,10 +22,12 @@ body {
     background-image   : url('./assets/bg-pattern-bottom-desktop.svg'), url('./assets/bg-pattern-top-desktop.svg');
     background-position: right bottom, left top;
     background-repeat  : no-repeat, no-repeat;
+    overflow-x         : hidden;
 
     @media (max-width:950px) {
         background-image: url('./assets/bg-pattern-bottom-mobile.svg'), url('./assets/bg-pattern-top-mobile.svg');
     }
+
 }
 
 main {
@@ -118,8 +120,8 @@ main {
     }
 
     @media (max-width:950px) {
-        gap               : 2.5rem;
-        justify-content   : flex-start;
+        gap            : 2.5rem;
+        justify-content: flex-start;
         margin-top     : 5%;
 
         .rating,
