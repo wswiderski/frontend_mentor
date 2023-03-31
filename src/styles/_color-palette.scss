@@ -1,18 +1,19 @@
-$brightblue      : hsl(220, 98%, 61%);
-$check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+//Primary
 
-// Light Theme
-$very-light-gray        : hsl(0, 0%, 98%);
-$very-light-grayish-blue: hsl(236, 33%, 92%);
-$light-grayish-blue     : hsl(233, 11%, 84%);
-$dark-grayish-blue      : hsl(236, 9%, 61%);
-$very-dark-grayish-blue : hsl(235, 19%, 35%);
+$scissors-1: hsl(39, 89%, 49%);
+$paper-1   : hsl(230, 89%, 62%);
+$rock-1    : hsl(349, 71%, 52%);
+$lizard-1  : hsl(261, 73%, 60%);
+$spock-1   : hsl(189, 59%, 53%);
 
-//Dark Theme
-$very-dark-blue            : hsl(235, 21%, 11%);
-$very-dark-desaturated-blue: hsl(235, 24%, 19%);
-$light-grayish-blue        : hsl(234, 39%, 85%);
-$light-grayish-blue_hover  : hsl(236, 33%, 92%);
-$dark-grayish-blue         : hsl(234, 11%, 52%);
-$very-dark-grayish-blue    : hsl(233, 14%, 35%);
-$very-dark-grayish-blue    : hsl(237, 14%, 26%);
+$scissors-2: hsl(40, 84%, 53%);
+$paper-2   : hsl(230, 89%, 65%);
+$rock-2    : hsl(349, 70%, 56%);
+$lizard-2  : hsl(261, 72%, 63%);
+$spock-2   : hsl(189, 58%, 57%);
+
+//Neutral
+
+$dark-text : hsl(229, 25%, 31%);
+$score-text: hsl(229, 64%, 46%);
+$header-outline: hsl(217, 16%, 45%);
