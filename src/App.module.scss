@@ -1,0 +1,92 @@
+@import './styles/variables.scss';
+
+.container {
+    margin        : auto;
+    max-width     : 1440px;
+    padding-top   : 2rem;
+    display       : flex;
+    flex-direction: column;
+    row-gap       : 4.5rem;
+    padding-left  : 10%;
+    padding-right : 10%;
+
+    nav {
+        padding-top: 3vh;
+
+        img {
+            width: 10vw;
+        }
+    }
+
+    section {
+        display: flex;
+        gap    : clamp(1rem, 1vh, 5rem);
+
+        img {
+            width: 100%;
+            flex : 1.2;
+        }
+
+        div {
+            padding-top   : 2rem;
+            display       : flex;
+            flex-direction: column;
+            color         : white;
+            flex          : 1;
+            gap           : .5rem;
+
+            h1 {
+                margin   : 0px;
+                font-size: clamp(1.5rem, 1vw, 2.7rem);
+            }
+
+            p {
+                font-size: clamp(.9rem, 1vw, 1.5rem);
+            }
+
+            button {
+                background-color: white;
+                color           : $violet;
+                border-radius   : 15px;
+                padding         : 2%;
+                width           : 30%;
+                transition      : background-color .2s ease-in;
+                border          : none;
+                box-shadow      : 8px 8px 24px 0px rgba(66, 68, 90, 1);
+
+                &:hover {
+                    cursor          : pointer;
+                    background-color: $softMagenta;
+                }
+            }
+        }
+
+        @media screen and (max-width: 950px) {
+            flex-direction: column;
+            align-items   : center;
+
+            div {
+                padding-top: 0rem;
+                gap        : .2rem;
+                text-align : center;
+                align-items: center;
+
+                button {
+                    width: 40vw;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        row-gap: 1rem;
+
+        nav {
+            padding-top: 1vh;
+
+            img {
+                width: 35vw;
+            }
+        }
+    }
+}
