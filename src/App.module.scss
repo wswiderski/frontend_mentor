@@ -20,11 +20,12 @@
 
     section {
         display: flex;
-        gap    : clamp(1rem, 1vh, 5rem);
+        gap    : 5rem;
 
         img {
-            width: 100%;
-            flex : 1.2;
+            flex      : 1;
+            max-width : 100%;
+            max-height: 100%;
         }
 
         div {
@@ -37,7 +38,7 @@
 
             h1 {
                 margin   : 0px;
-                font-size: clamp(1.5rem, 1vw, 2.7rem);
+                font-size: clamp(1rem, 0.6919rem + 1.3146vw, 1.875rem);
             }
 
             p {
@@ -62,6 +63,7 @@
         }
 
         @media screen and (max-width: 950px) {
+            gap           : 1rem;
             flex-direction: column;
             align-items   : center;
 
@@ -75,6 +77,48 @@
                     width: 40vw;
                 }
             }
+        }
+    }
+
+
+    footer {
+        display        : flex;
+        gap            : 1rem;
+        justify-content: end;
+
+        div {
+            width           : 1.5rem;
+            height          : 1.5rem;
+            border          : none;
+            padding         : 10px;
+            border-radius   : 50%;
+            background-color: transparent;
+            border          : solid 1px white;
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            transition      : border-color .2s ease-in;
+
+            img {
+                transition: filter .2s ease-in;
+                max-width : 100%;
+                max-height: 100%;
+                filter    : invert(99%) sepia(1%) saturate(2%) hue-rotate(74deg) brightness(111%) contrast(100%);
+            }
+
+            &:hover {
+                cursor      : pointer;
+                border-color: $softMagenta;
+
+                img {
+                    filter: invert(75%) sepia(56%) saturate(1522%) hue-rotate(233deg) brightness(92%) contrast(99%);
+                }
+            }
+        }
+
+        @media screen and (max-width: 950px) {
+            margin-top     : 10px;
+            justify-content: center;
         }
     }
 
