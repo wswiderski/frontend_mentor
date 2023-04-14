@@ -7,39 +7,79 @@ import facebook from "./assets/facebook-f.svg";
 import twitter from "./assets/twitter.svg";
 import instagram from "./assets/instagram.svg";
 
+import { motion } from "framer-motion";
+
 const App = () => {
   return (
     <div className={styles.container}>
       <nav>
-        <img src={logo} alt="Logo" />
+        <motion.img
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          src={logo}
+          alt="Logo"
+        />
       </nav>
       <section>
         <div>
-          <img src={illustration} alt="Illustration" />
+          <motion.img
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            src={illustration}
+            alt="Illustration"
+          />
         </div>
         <div>
-          <h1>
+          <motion.h1
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             Build The Community <br />
             Your Fans Will Love
-          </h1>
-          <p>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             Huddle re-imagines the way we build communities. You have a voice,
             but so does your audience. Create connections with your users as you
             engage in genuine discussion. Register
-          </p>
-          <button>Register</button>
+          </motion.p>
+          <motion.button
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            Register
+          </motion.button>
         </div>
       </section>
       <footer>
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <img src={facebook} alt="Facebook" />
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
+        >
           <img src={twitter} alt="Twitter" />
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+        >
           <img src={instagram} alt="Instagram" />
-        </div>
+        </motion.div>
       </footer>
     </div>
   );
