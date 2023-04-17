@@ -1,7 +1,9 @@
-import "./App.css";
+import styles from "./App.module.scss";
 
-function App() {
-  return <div></div>;
-}
+import { motion } from "framer-motion";
+
+const App = () => {
+  return <div>Test</div>;
+};
 
 export default App;
