@@ -23,6 +23,11 @@
 
         a {
             font-weight: 600;
+
+            &:hover {
+                color : $softRed;
+                cursor: pointer;
+            }
         }
 
         p {

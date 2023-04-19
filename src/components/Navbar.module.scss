@@ -1,3 +1,5 @@
+@import '../styles/variables.scss';
+
 .navbar {
     position: fixed;
     top     : 0;
@@ -13,6 +15,17 @@
 
     span {
         flex: 1;
+    }
+
+    a {
+        font-weight: 500;
+        font-size  : 1.2rem;
+        color      : $darkGrayishBlue;
+
+        &:hover {
+            color : $softRed;
+            cursor: pointer;
+        }
     }
 }
 
@@ -38,9 +51,5 @@
         justify-content: center;
         gap            : 20px;
         padding-left   : 20px;
-
-        a {
-            font-weight: 500;
-        }
     }
 }

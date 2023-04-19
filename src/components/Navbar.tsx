@@ -6,6 +6,8 @@ import { useState } from "react";
 import styles from "./Navbar.module.scss";
 import { useWindowSize } from "../util/useWindowSize";
 
+import { AnimatePresence, motion } from "framer-motion";
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -28,22 +30,30 @@ const Navbar = () => {
           onClick={() => setMenuOpen(true)}
         />
       )}
-      {menuOpen && (
-        <div className={styles.sidemenu}>
-          <img
-            src={menuClose}
-            alt="Menu close icon"
-            onClick={() => setMenuOpen(false)}
-          />
-          <div>
-            <a>Home</a>
-            <a>New</a>
-            <a>Popular</a>
-            <a>Trending</a>
-            <a>Categories</a>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ x: "100vw" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100vw" }}
+            transition={{ duration: 0.5 }}
+            className={styles.sidemenu}
+          >
+            <img
+              src={menuClose}
+              alt="Menu close icon"
+              onClick={() => setMenuOpen(false)}
+            />
+            <div>
+              <a>Home</a>
+              <a>New</a>
+              <a>Popular</a>
+              <a>Trending</a>
+              <a>Categories</a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

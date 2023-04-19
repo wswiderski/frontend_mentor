@@ -12,7 +12,6 @@ const TopItem: FC<TopItemProps> = (props) => {
   return (
     <div className={styles.item}>
       <img src={props.imageSrc} alt="Article image" />
-
       <div>
         <span>{props.number}</span>
         <a>{props.topic}</a>
