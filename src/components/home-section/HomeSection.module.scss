@@ -1,0 +1,13 @@
+.home {
+    margin-top    : 60px;
+    display       : flex;
+    flex-direction: column;
+    padding       : 1.3rem;
+    gap           : 2.5rem;
+}
+
+.articles {
+    display       : flex;
+    flex-direction: column;
+    gap           : 2.5rem;
+}
