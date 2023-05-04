@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    width  : 100%;
+}
+
+.selection {
+    height         : 60vh;
+    width          : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    position       : relative;
+
+    div {
+        position: absolute;
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+.scissorsInitPosition {
+    bottom: 75%;
+}
+
+.paperInitPosition {
+    bottom: 50%;
+    left  : 75%;
+}
+
+.rockInitPosition {
+    top : 75%;
+    left: 65%;
+}
+
+.lizardInitPosition {
+    top  : 75%;
+    right: 65%;
+}
+
+.spockInitPosition {
+    bottom: 50%;
+    right : 75%;
+}

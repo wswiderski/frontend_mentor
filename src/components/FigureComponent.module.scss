@@ -1,0 +1,49 @@
+@import '../styles/variables.scss';
+
+.figure {
+    width              : min(9rem, 15vw);
+    height             : min(9rem, 15vw);
+    border-radius      : 50%;
+    background         : white;
+    border             : 1.25em solid;
+    display            : flex;
+    align-items        : center;
+    justify-content    : center;
+    background-repeat  : no-repeat;
+    background-position: center;
+    background-size    : 50%;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.scissors {
+    background-image: url('../assets/scissors.svg');
+    border-color    : $scissors;
+    box-shadow      : inset 0px .5rem 0px 0px rgba(66, 68, 90, .5), 0px .6rem 0px 0px $scissors-dark;
+}
+
+.lizard {
+    background-image: url('../assets/lizard.svg');
+    border-color    : $lizard;
+    box-shadow      : inset 0px .5rem 0px 0px rgba(66, 68, 90, .5), 0px .6rem 0px 0px $lizard-dark;
+}
+
+.paper {
+    background-image: url('../assets/paper.svg');
+    border-color    : $paper;
+    box-shadow      : inset 0px .5rem 0px 0px rgba(66, 68, 90, .5), 0px .6rem 0px 0px $paper-dark;
+}
+
+.rock {
+    background-image: url('../assets/rock.svg');
+    border-color    : $rock;
+    box-shadow      : inset 0px .5rem 0px 0px rgba(66, 68, 90, .5), 0px .6rem 0px 0px $rock-dark;
+}
+
+.spock {
+    background-image: url('../assets/spock.svg');
+    border-color    : $spock;
+    box-shadow      : inset 0px .5rem 0px 0px rgba(66, 68, 90, .5), 0px .6rem 0px 0px $spock-dark;
+}

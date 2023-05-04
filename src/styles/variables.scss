@@ -1,9 +1,16 @@
-// primary
-$softOrange: hsl(35, 77%, 62%);
-$softRed   : hsl(5, 85%, 63%);
+//Primary
+$scissors-dark : rgba(197, 108, 27, 255);
+$scissors      : hsl(40, 84%, 53%);
+$paper-dark    : hsl(230, 89%, 62%);
+$paper         :hsl(230, 89%, 65%);
+$rock-dark     : hsl(349, 71%, 52%);
+$rock          : hsl(349, 70%, 56%);
+$lizard-dark   : hsl(261, 73%, 60%);
+$lizard        : hsl(261, 72%, 63%);
+$spock-dark    : hsl(189, 59%, 53%);
+$spock         : hsl(189, 58%, 57%);
 
-// neutral
-$offWhite       : hsl(36, 100%, 99%);
-$grayishBlue    : hsl(233, 8%, 79%);
-$darkGrayishBlue: hsl(236, 13%, 42%);
-$veryDarkBlue   : hsl(240, 100%, 5%);
+//Neutral
+$dark-text : hsl(229, 25%, 31%);
+$score-text: hsl(229, 64%, 46%);
+$header-outline: hsl(217, 16%, 45%);
