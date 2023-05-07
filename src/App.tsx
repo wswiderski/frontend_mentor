@@ -1,15 +1,7 @@
-import styles from "./App.module.scss";
-
-import Navbar from "./components/Navbar";
-import HomeSection from "./components/home-section/HomeSection";
+import QrCodeComponent from "./components/QrCodeComponent";
 
 const App = () => {
-  return (
-    <main className={styles.app}>
-      <Navbar></Navbar>
-      <HomeSection></HomeSection>
-    </main>
-  );
+  return <QrCodeComponent></QrCodeComponent>;
 };
 
 export default App;
