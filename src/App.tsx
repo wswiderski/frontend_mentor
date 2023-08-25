@@ -1,7 +1,7 @@
-import QrCodeComponent from "./components/QrCodeComponent";
+import SignUpComponent from "./components/SignUpComponent";
 
 const App = () => {
-  return <QrCodeComponent></QrCodeComponent>;
+  return <SignUpComponent></SignUpComponent>;
 };
 
 export default App;
